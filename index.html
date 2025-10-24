@@ -14,12 +14,12 @@
         }
         
         body {
-            background-image: url('https://cdn.discordapp.com/attachments/1428012078349684776/1431008908733972605/OIP_7.webp?ex=68fbda66&is=68fa88e6&hm=babca91b36105034e559951638dce45a35cb25bee382b746d09ef0d671b308e0&');
+            background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278950503547072/10003.png?ex=68fcd5e5&is=68fb8465&hm=e10ea9efd80e9bfe2e28fc77cb85c9bb08e09293d9f8a0af3676fc3ac88a353c&');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            color: #064e3b;
+            color: #2596be;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -34,6 +34,24 @@
             z-index: -1;
         }
         
+        .top-bar {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .top-bar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -42,59 +60,103 @@
             z-index: 1;
         }
         
-        .header-logo {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 2;
-        }
-        
-        .header-logo img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0;
-        }
-        
-        header {
+        .header-section {
             text-align: center;
             margin-bottom: 20px;
-            padding-top: 120px;
+            padding-top: 30px;
+        }
+        
+        .site-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2596be;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
         
         h1 {
             font-size: 48px;
             margin-bottom: 15px;
-            color: #064e3b;
-            font-weight: 800;
+            color: #2596be;
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
         
         .subtitle {
             font-size: 22px;
             margin-bottom: 40px;
-            color: #064e3b;
-            font-weight: 600;
+            color: #000000;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .subtitle-line {
+            display: block;
+            margin-bottom: 8px;
         }
         
         .video-section {
-            width: 100%;
+            width: calc(100% - 20px);
             height: 70vh;
-            margin: 0 0 40px 0;
+            margin: 0 10px 40px 10px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #064e3b;
             background: #000;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .video-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(37, 150, 190, 0.9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: 3px solid #2596be;
+            outline-offset: 2px;
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+            background: rgba(37, 150, 190, 1);
+        }
+        
+        .play-button i {
+            color: white;
+            font-size: 30px;
+            margin-left: 5px;
         }
         
         .video-section iframe {
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
             border: none;
             display: block;
+            margin: 3px;
         }
         
         .cta-section {
@@ -104,58 +166,38 @@
         
         .cta-button {
             display: block;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+            width: calc(60% - 6px);
+            margin: 0 auto;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
             color: white;
             border: none;
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(6, 78, 59, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
             letter-spacing: 0.5px;
-            border: 3px solid #064e3b;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
             margin-bottom: 50px;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.6);
+            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
             background: white;
-            color: #064e3b;
-            border: 3px solid #064e3b;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            font-size: 16px;
-            color: #064e3b;
-            font-weight: 600;
-        }
-        
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #064e3b, transparent);
-            margin: 35px 0;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #064e3b;
-            font-size: 16px;
-            font-weight: 600;
+            color: #2596be;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
         }
         
         /* Stats Section */
         .stats-section {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin: 0 0 50px 0;
             padding: 40px 0;
         }
@@ -166,15 +208,36 @@
         
         .stat-value {
             font-size: 36px;
-            font-weight: 800;
-            color: #064e3b;
+            font-weight: 700;
+            color: #2596be;
             margin-bottom: 10px;
         }
         
         .stat-label {
             font-size: 18px;
-            color: #064e3b;
-            font-weight: 600;
+            color: #2596be;
+            font-weight: 500;
+        }
+        
+        .student-avatars {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-left: -15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .avatar:first-child {
+            margin-left: 0;
         }
         
         /* Selection Page Styles */
@@ -192,27 +255,15 @@
         }
         
         .dark-blue-background h1 {
-            color: #10b981;
+            color: #2596be;
         }
         
         .dark-blue-background .subtitle {
             color: #d1fae5;
         }
         
-        .dark-blue-background .stats {
-            color: #d1fae5;
-        }
-        
-        .dark-blue-background .divider {
-            background: linear-gradient(to right, transparent, #10b981, transparent);
-        }
-        
-        .dark-blue-background .footer {
-            color: #d1fae5;
-        }
-        
         .dark-blue-background .stat-value {
-            color: #10b981;
+            color: #2596be;
         }
         
         .dark-blue-background .stat-label {
@@ -220,7 +271,8 @@
         }
         
         .dark-blue-background .video-section {
-            border: 3px solid #10b981;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
             background: #000;
         }
         
@@ -255,48 +307,52 @@
             font-size: 20px;
             margin-bottom: 20px;
             color: #d1fae5;
-            font-weight: 600;
+            font-weight: 500;
             text-align: center;
         }
         
         .selection-button {
-            padding: 20px 40px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
             color: white;
             border: none;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-            width: 100%;
-            max-width: 250px;
-            border: 3px solid #10b981;
+            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
+            width: calc(80% - 6px);
+            max-width: calc(200px - 6px);
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
         }
         
         .selection-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.6);
+            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
             background: white;
-            color: #10b981;
-            border: 3px solid #10b981;
+            color: #2596be;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
         }
         
         .back-button {
             margin-top: 20px;
-            padding: 12px 25px;
+            padding: 8px 16px;
             background: #374151;
             color: #d1fae5;
             border: none;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid #374151;
+            outline: 2px solid #374151;
+            outline-offset: 2px;
         }
         
         .back-button:hover {
             background: #4b5563;
-            border: 2px solid #4b5563;
+            outline: 2px solid #4b5563;
+            outline-offset: 2px;
         }
         
         /* Floating Button */
@@ -304,25 +360,31 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            padding: 15px 25px;
-            background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
             color: white;
             border: none;
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(6, 78, 59, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
-            border: 3px solid #064e3b;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
         }
         
         .floating-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.6);
+            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
             background: white;
-            color: #064e3b;
-            border: 3px solid #064e3b;
+            color: #2596be;
+            outline: 3px solid #2596be;
+            outline-offset: 3px;
+        }
+        
+        .selection-page .floating-button {
+            display: none;
         }
         
         @media (max-width: 768px) {
@@ -335,17 +397,26 @@
             }
             
             .cta-button {
-                font-size: 18px;
-                padding: 18px;
+                font-size: 16px;
+                padding: 10px 20px;
+                width: calc(80% - 6px);
             }
             
             .video-section {
                 height: 50vh;
+                width: calc(100% - 20px);
+                margin: 0 10px 40px 10px;
             }
             
-            .header-logo img {
-                width: 60px;
-                height: 60px;
+            .video-section iframe {
+                width: calc(100% - 6px);
+                height: calc(100% - 6px);
+                margin: 3px;
+            }
+            
+            .top-bar img {
+                width: 50px;
+                height: 50px;
             }
             
             .button-container {
@@ -354,12 +425,19 @@
             }
             
             .selection-button {
-                max-width: 100%;
+                max-width: calc(100% - 6px);
+                width: calc(80% - 6px);
+                padding: 10px 20px;
+                font-size: 16px;
             }
             
             .stats-section {
                 flex-direction: column;
                 gap: 30px;
+            }
+            
+            .site-name {
+                font-size: 12px;
             }
         }
     </style>
@@ -367,24 +445,34 @@
 <body>
     <div class="overlay"></div>
     
+    <!-- Top Bar with Logo -->
+    <div class="top-bar">
+        <img src="https://cdn.discordapp.com/attachments/1412062435053146203/1431001403933069402/logo_green.jpg?ex=68fbd369&is=68fa81e9&hm=e276cf2d414f55c40b465d617c7b3e3b6bfdbfecc5fe3b62794ef5c1d2853caf&" alt="Logo">
+    </div>
+    
     <!-- Floating Button -->
     <button class="floating-button" onclick="showSelectionPage()">Pridruži se sada</button>
     
     <!-- Main Page -->
     <div id="mainPage">
-        <div class="header-logo">
-            <img src="https://cdn.discordapp.com/attachments/1412062435053146203/1431001403933069402/logo_green.jpg?ex=68fbd369&is=68fa81e9&hm=e276cf2d414f55c40b465d617c7b3e3b6bfdbfecc5fe3b62794ef5c1d2853caf&" alt="Logo">
-        </div>
-        
         <div class="container">
-            <header>
+            <div class="header-section">
+                <div class="site-name">kliperi.com</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
-                <p class="subtitle">Želite da zarađujete novac samo postavljanjem klipova? Ja ću vam pomoći! Počnite odmah.</p>
-            </header>
+                <p class="subtitle">
+                    <span class="subtitle-line">Želite da zarađujete novac samo postavljanjem klipova?</span>
+                    <span class="subtitle-line">Ja ću vam pomoći! Počnite odmah.</span>
+                </p>
+            </div>
             
             <!-- Video section -->
             <div class="video-section">
-                <iframe src="https://streamable.com/e/skrua3?autoplay=1&muted=1" allow="autoplay" frameborder="0"></iframe>
+                <div class="video-overlay" id="videoOverlay">
+                    <div class="play-button" onclick="playVideo()">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <iframe id="videoPlayer" src="https://streamable.com/e/skrua3?autoplay=1&muted=1&controls=0" allow="autoplay" frameborder="0"></iframe>
             </div>
             
             <div class="cta-section">
@@ -394,42 +482,42 @@
             <!-- Stats Section -->
             <div class="stats-section">
                 <div class="stat-item">
-                    <div class="stat-value">10K+</div>
-                    <div class="stat-label">Priče o uspehu</div>
-                </div>
-                
-                <div class="stat-item">
-                    <div class="stat-value">12+</div>
-                    <div class="stat-label">Metode stvaranja bogatstva</div>
-                </div>
-                
-                <div class="stat-item">
+                    <div class="student-avatars">
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                    </div>
                     <div class="stat-value">1K+</div>
-                    <div class="stat-label">Aktivnih studenata</div>
+                    <div class="stat-label">Klipera</div>
                 </div>
-            </div>
-            
-            <div class="footer">
-                <p>© 2025 Zarađujte Novac. Sva prava zadržana.</p>
             </div>
         </div>
     </div>
     
     <!-- Selection Page -->
     <div id="selectionPage" class="selection-page dark-blue-background">
-        <div class="header-logo">
+        <div class="top-bar">
             <img src="https://cdn.discordapp.com/attachments/1412062435053146203/1431001403933069402/logo_green.jpg?ex=68fbd369&is=68fa81e9&hm=e276cf2d414f55c40b465d617c7b3e3b6bfdbfecc5fe3b62794ef5c1d2853caf&" alt="Logo">
         </div>
         
         <div class="container">
-            <header>
+            <div class="header-section">
+                <div class="site-name">kliperi.com</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
-                <p class="subtitle">Želite da zarađujete novac samo postavljanjem klipova? Ja ću vam pomoći! Počnite odmah.</p>
-            </header>
+                <p class="subtitle">
+                    <span class="subtitle-line">Želite da zarađujete novac samo postavljanjem klipova?</span>
+                    <span class="subtitle-line">Ja ću vam pomoći! Počnite odmah.</span>
+                </p>
+            </div>
             
             <!-- Video section -->
             <div class="video-section">
-                <iframe src="https://streamable.com/e/skrua3?autoplay=1&muted=1" allow="autoplay" frameborder="0"></iframe>
+                <div class="video-overlay" id="videoOverlay2">
+                    <div class="play-button" onclick="playVideo2()">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <iframe id="videoPlayer2" src="https://streamable.com/e/skrua3?autoplay=1&muted=1&controls=0" allow="autoplay" frameborder="0"></iframe>
             </div>
             
             <div class="selection-container">
@@ -454,28 +542,43 @@
             <!-- Stats Section -->
             <div class="stats-section">
                 <div class="stat-item">
-                    <div class="stat-value">10K+</div>
-                    <div class="stat-label">Priče o uspehu</div>
-                </div>
-                
-                <div class="stat-item">
-                    <div class="stat-value">12+</div>
-                    <div class="stat-label">Metode stvaranja bogatstva</div>
-                </div>
-                
-                <div class="stat-item">
+                    <div class="student-avatars">
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                    </div>
                     <div class="stat-value">1K+</div>
-                    <div class="stat-label">Aktivnih studenata</div>
+                    <div class="stat-label">Klipera</div>
                 </div>
-            </div>
-            
-            <div class="footer">
-                <p>© 2025 Zarađujte Novac. Sva prava zadržana.</p>
             </div>
         </div>
     </div>
 
     <script>
+        function playVideo() {
+            const overlay = document.getElementById('videoOverlay');
+            const video = document.getElementById('videoPlayer');
+            
+            // Remove muted parameter and enable audio
+            video.src = video.src.replace('muted=1', 'muted=0');
+            video.src = video.src.replace('controls=0', 'controls=1');
+            
+            // Hide overlay
+            overlay.classList.add('hidden');
+        }
+        
+        function playVideo2() {
+            const overlay = document.getElementById('videoOverlay2');
+            const video = document.getElementById('videoPlayer2');
+            
+            // Remove muted parameter and enable audio
+            video.src = video.src.replace('muted=1', 'muted=0');
+            video.src = video.src.replace('controls=0', 'controls=1');
+            
+            // Hide overlay
+            overlay.classList.add('hidden');
+        }
+        
         function showSelectionPage() {
             document.getElementById('mainPage').style.display = 'none';
             document.getElementById('selectionPage').style.display = 'block';
