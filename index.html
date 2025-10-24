@@ -24,38 +24,25 @@
             min-height: 100vh;
         }
         
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.85);
-            z-index: -1;
-        }
-        
-        .top-bar {
-            position: relative;
-            width: 100%;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.95);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         
-        .top-bar img {
-            width: 60px;
-            height: 60px;
+        .logo-container img {
+            width: 80px;
+            height: 80px;
             border-radius: 0;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 100px 20px 40px;
             position: relative;
             z-index: 1;
         }
@@ -63,7 +50,23 @@
         .header-section {
             text-align: center;
             margin-bottom: 20px;
-            padding-top: 30px;
+            position: relative;
+        }
+        
+        .title-overlay {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            height: 80px;
+            background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431372546023886878/10001_1.png?ex=68fd2d10&is=68fbdb90&hm=3d5b1e6e5e6e3724aea0330d72011a1ea92e8eccdbbd9605f6d3198e3a75940f&');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.8;
         }
         
         .site-name {
@@ -81,6 +84,8 @@
             color: #117338;
             font-weight: 700;
             letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
         }
         
         .subtitle {
@@ -167,20 +172,18 @@
         
         .cta-button {
             display: block;
-            width: calc(60% - 6px);
+            width: 200px;
             margin: 0 auto;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
+            padding: 8px 16px;
+            background: #117338;
             color: white;
             border: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
-            letter-spacing: 0.5px;
             outline: 3px solid #117338;
             outline-offset: 3px;
             margin-bottom: 50px;
@@ -188,12 +191,12 @@
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
             color: #117338;
             outline: 3px solid #117338;
             outline-offset: 3px;
+            transform: none;
+            box-shadow: none;
         }
         
         .arrow-left, .arrow-right {
@@ -208,12 +211,12 @@
         }
         
         .arrow-left {
-            left: 10%;
+            left: 25%;
             background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
         }
         
         .arrow-right {
-            right: 10%;
+            right: 25%;
             background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
             transform: translateY(-50%) scaleX(-1);
         }
@@ -222,31 +225,15 @@
         .stats-section {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin: 0 0 50px 0;
             padding: 40px 0;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: 36px;
-            font-weight: 700;
-            color: #117338;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 18px;
-            color: #117338;
-            font-weight: 500;
+            gap: 30px;
         }
         
         .student-avatars {
             display: flex;
             justify-content: center;
-            margin-top: 15px;
         }
         
         .avatar {
@@ -257,11 +244,28 @@
             margin-left: -15px;
             background-size: cover;
             background-position: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
         
         .avatar:first-child {
             margin-left: 0;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #117338;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: #117338;
+            font-weight: 500;
         }
         
         /* Selection Page Styles */
@@ -272,10 +276,6 @@
         .dark-blue-background {
             background: linear-gradient(135deg, #0f172a 0%, #000 100%);
             color: #fff;
-        }
-        
-        .dark-blue-background .overlay {
-            background: rgba(15, 23, 42, 0.8);
         }
         
         .dark-blue-background h1 {
@@ -307,10 +307,16 @@
         }
         
         .selection-title {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 30px;
             color: #fff;
             font-weight: 700;
+        }
+        
+        .selection-subtitle {
+            font-size: 24px;
+            margin-bottom: 50px;
+            color: #d1fae5;
         }
         
         .button-container {
@@ -328,36 +334,35 @@
         }
         
         .button-label {
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 30px;
             color: #d1fae5;
             font-weight: 500;
             text-align: center;
         }
         
         .selection-button {
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
+            padding: 20px 40px;
+            background: #117338;
             color: white;
             border: none;
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
-            width: calc(80% - 6px);
-            max-width: calc(200px - 6px);
+            width: 100%;
+            max-width: 400px;
             outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
         .selection-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
             color: #117338;
             outline: 3px solid #117338;
             outline-offset: 3px;
+            transform: none;
+            box-shadow: none;
         }
         
         .back-button {
@@ -385,13 +390,12 @@
             bottom: 30px;
             right: 30px;
             padding: 10px 18px;
-            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
+            background: #117338;
             color: white;
             border: none;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
             outline: 3px solid #117338;
@@ -399,12 +403,12 @@
         }
         
         .floating-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
             color: #117338;
             outline: 3px solid #117338;
             outline-offset: 3px;
+            transform: none;
+            box-shadow: none;
         }
         
         .selection-page .floating-button {
@@ -412,35 +416,45 @@
         }
         
         @media (max-width: 768px) {
+            .container {
+                padding: 80px 15px 20px;
+            }
+            
+            .logo-container img {
+                width: 60px;
+                height: 60px;
+            }
+            
             h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .subtitle {
-                font-size: 20px;
+                font-size: 18px;
+            }
+            
+            .title-overlay {
+                max-width: 300px;
+                height: 60px;
+                top: 60px;
             }
             
             .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-                width: calc(80% - 6px);
+                font-size: 14px;
+                padding: 6px 12px;
+                width: 150px;
             }
             
             .video-section {
-                height: 50vh;
+                height: 40vh;
                 width: calc(100% - 20px);
-                margin: 0 10px 40px 10px;
+                margin: 0 10px 20px 10px;
             }
             
             .video-section iframe {
                 width: calc(100% - 6px);
                 height: calc(100% - 6px);
                 margin: 3px;
-            }
-            
-            .top-bar img {
-                width: 50px;
-                height: 50px;
             }
             
             .button-container {
@@ -451,13 +465,14 @@
             .selection-button {
                 max-width: calc(100% - 6px);
                 width: calc(80% - 6px);
-                padding: 10px 20px;
-                font-size: 16px;
+                padding: 15px 30px;
+                font-size: 18px;
             }
             
             .stats-section {
-                flex-direction: column;
-                gap: 30px;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
             }
             
             .site-name {
@@ -470,20 +485,45 @@
             }
             
             .arrow-left {
-                left: 5%;
+                left: 15%;
             }
             
             .arrow-right {
-                right: 5%;
+                right: 15%;
+            }
+            
+            .selection-title {
+                font-size: 28px;
+            }
+            
+            .selection-subtitle {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            
+            .button-label {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .avatar {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .stat-value {
+                font-size: 28px;
+            }
+            
+            .stat-label {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    
-    <!-- Top Bar with Logo -->
-    <div class="top-bar">
+    <!-- Logo Container -->
+    <div class="logo-container">
         <img src="https://cdn.discordapp.com/attachments/1412062435053146203/1431001403933069402/logo_green.jpg?ex=68fbd369&is=68fa81e9&hm=e276cf2d414f55c40b465d617c7b3e3b6bfdbfecc5fe3b62794ef5c1d2853caf&" alt="Logo">
     </div>
     
@@ -494,6 +534,7 @@
     <div id="mainPage">
         <div class="container">
             <div class="header-section">
+                <div class="title-overlay"></div>
                 <div class="site-name">k l i p e r i . c o m</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
                 <p class="subtitle">
@@ -537,6 +578,7 @@
     <div id="selectionPage" class="selection-page dark-blue-background">
         <div class="container">
             <div class="header-section">
+                <div class="title-overlay"></div>
                 <div class="site-name">k l i p e r i . c o m</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
                 <p class="subtitle">
@@ -557,7 +599,7 @@
             
             <div class="selection-container">
                 <h2 class="selection-title">Izaberite Tip Naloga</h2>
-                <p>Da li želite da gledate i delite klipove ili da ih kreiramo?</p>
+                <p class="selection-subtitle">Da li želite da gledate i delite klipove ili da ih kreiramo?</p>
                 
                 <div class="button-container">
                     <div class="button-column">
@@ -633,46 +675,6 @@
             // Redirect to Calendly for Creator
             window.location.href = 'https://calendly.com/digitalzentro/30min';
         }
-        
-        // Add interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaButton = document.querySelector('.cta-button');
-            
-            ctaButton.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
-            });
-            
-            ctaButton.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-            
-            // Add animation to elements
-            const animateOnScroll = function() {
-                const elements = document.querySelectorAll('.video-section, .cta-section, .stats-section');
-                
-                elements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-                    
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.style.opacity = "1";
-                        element.style.transform = "translateY(0)";
-                    }
-                });
-            };
-            
-            // Set initial state for animation
-            const elements = document.querySelectorAll('.video-section, .cta-section, .stats-section');
-            elements.forEach(element => {
-                element.style.opacity = "0";
-                element.style.transform = "translateY(20px)";
-                element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-            });
-            
-            window.addEventListener('scroll', animateOnScroll);
-            // Initial check
-            animateOnScroll();
-        });
     </script>
 </body>
 </html>
