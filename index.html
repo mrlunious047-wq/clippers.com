@@ -79,13 +79,14 @@
         }
         
         h1 {
-            font-size: 58px;
+            font-size: 62px;
             margin-bottom: 15px;
             color: #117338;
-            font-weight: 700;
+            font-weight: 900;
             letter-spacing: -0.5px;
             position: relative;
             z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         
         .subtitle {
@@ -103,7 +104,7 @@
         
         .video-section {
             width: calc(100% - 10px);
-            height: 70vh;
+            height: 60vh;
             margin: 0 5px 40px 5px;
             position: relative;
             overflow: hidden;
@@ -201,7 +202,7 @@
         .arrow-left, .arrow-right {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(180deg);
             width: 60px;
             height: 60px;
             background-size: contain;
@@ -210,14 +211,14 @@
         }
         
         .arrow-left {
-            left: 25%;
+            left: 32%;
             background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
         }
         
         .arrow-right {
-            right: 25%;
+            right: 32%;
             background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
-            transform: translateY(-50%) scaleX(-1);
+            transform: translateY(-50%) rotate(180deg) scaleX(-1);
         }
         
         /* Stats Section */
@@ -430,7 +431,8 @@
             }
             
             h1 {
-                font-size: 42px;
+                font-size: 46px;
+                font-weight: 900;
             }
             
             .subtitle {
@@ -450,7 +452,7 @@
             }
             
             .video-section {
-                height: 40vh;
+                height: 50vh;
                 width: calc(100% - 8px);
                 margin: 0 4px 20px 4px;
             }
@@ -485,11 +487,11 @@
             }
             
             .arrow-left {
-                left: 15%;
+                left: 20%;
             }
             
             .arrow-right {
-                right: 15%;
+                right: 20%;
             }
             
             .selection-title {
