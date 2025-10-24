@@ -17,7 +17,7 @@
             background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278950503547072/10003.png?ex=68fcd5e5&is=68fb8465&hm=e10ea9efd80e9bfe2e28fc77cb85c9bb08e09293d9f8a0af3676fc3ac88a353c&');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-repeat: no-repeat;
             color: #117338;
             line-height: 1.6;
@@ -70,16 +70,16 @@
         }
         
         .site-name {
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 600;
             color: #117338;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 2px;
         }
         
         h1 {
-            font-size: 48px;
+            font-size: 58px;
             margin-bottom: 15px;
             color: #117338;
             font-weight: 700;
@@ -89,7 +89,7 @@
         }
         
         .subtitle {
-            font-size: 22px;
+            font-size: 28px;
             margin-bottom: 40px;
             color: #000000;
             font-weight: 500;
@@ -102,22 +102,22 @@
         }
         
         .video-section {
-            width: calc(100% - 20px);
+            width: calc(100% - 10px);
             height: 70vh;
-            margin: 0 10px 40px 10px;
+            margin: 0 5px 40px 5px;
             position: relative;
             overflow: hidden;
             background: #000;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
         }
         
         .video-overlay {
             position: absolute;
-            top: 3px;
-            left: 3px;
-            right: 3px;
-            bottom: 3px;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
             background: rgba(0, 0, 0, 0.6);
             display: flex;
             justify-content: center;
@@ -141,8 +141,7 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            outline: 3px solid #ffffff;
-            outline-offset: 2px;
+            outline: 2px solid #ffffff;
         }
         
         .play-button:hover {
@@ -157,11 +156,11 @@
         }
         
         .video-section iframe {
-            width: calc(100% - 6px);
-            height: calc(100% - 6px);
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
             border: none;
             display: block;
-            margin: 3px;
+            margin: 2px;
         }
         
         .cta-section {
@@ -172,20 +171,20 @@
         
         .cta-button {
             display: block;
-            width: 200px;
+            width: 250px;
             margin: 0 auto;
-            padding: 8px 16px;
+            padding: 12px 24px;
             background: #117338;
             color: white;
             border: none;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
             margin-bottom: 50px;
             position: relative;
         }
@@ -193,8 +192,8 @@
         .cta-button:hover {
             background: white;
             color: #117338;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
             transform: none;
             box-shadow: none;
         }
@@ -240,7 +239,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 2px solid white;
             margin-left: -15px;
             background-size: cover;
             background-position: center;
@@ -295,8 +294,8 @@
         }
         
         .dark-blue-background .video-section {
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
             background: #000;
         }
         
@@ -352,15 +351,15 @@
             transition: all 0.3s ease;
             width: 100%;
             max-width: 400px;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
         }
         
         .selection-button:hover {
             background: white;
             color: #117338;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
             transform: none;
             box-shadow: none;
         }
@@ -398,15 +397,15 @@
             cursor: pointer;
             z-index: 1000;
             transition: all 0.3s ease;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
         }
         
         .floating-button:hover {
             background: white;
             color: #117338;
-            outline: 3px solid #117338;
-            outline-offset: 3px;
+            outline: 2px solid #117338;
+            outline-offset: 2px;
             transform: none;
             box-shadow: none;
         }
@@ -425,12 +424,17 @@
                 height: 60px;
             }
             
+            .site-name {
+                font-size: 16px;
+                margin-bottom: 1px;
+            }
+            
             h1 {
-                font-size: 32px;
+                font-size: 42px;
             }
             
             .subtitle {
-                font-size: 18px;
+                font-size: 22px;
             }
             
             .title-overlay {
@@ -440,21 +444,21 @@
             }
             
             .cta-button {
-                font-size: 14px;
-                padding: 6px 12px;
-                width: 150px;
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 200px;
             }
             
             .video-section {
                 height: 40vh;
-                width: calc(100% - 20px);
-                margin: 0 10px 20px 10px;
+                width: calc(100% - 8px);
+                margin: 0 4px 20px 4px;
             }
             
             .video-section iframe {
-                width: calc(100% - 6px);
-                height: calc(100% - 6px);
-                margin: 3px;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                margin: 2px;
             }
             
             .button-container {
@@ -473,10 +477,6 @@
                 flex-direction: row;
                 justify-content: center;
                 gap: 20px;
-            }
-            
-            .site-name {
-                font-size: 12px;
             }
             
             .arrow-left, .arrow-right {
@@ -563,9 +563,9 @@
             <div class="stats-section">
                 <div class="stat-item">
                     <div class="student-avatars">
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
                         <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
-                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
-                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
                     </div>
                     <div class="stat-value">1K+</div>
                     <div class="stat-label">Klipera</div>
@@ -577,26 +577,6 @@
     <!-- Selection Page -->
     <div id="selectionPage" class="selection-page dark-blue-background">
         <div class="container">
-            <div class="header-section">
-                <div class="title-overlay"></div>
-                <div class="site-name">k l i p e r i . c o m</div>
-                <h1>ZARAĐUJTE NOVAC DANAS</h1>
-                <p class="subtitle">
-                    <span class="subtitle-line">Želite da zarađujete novac samo postavljanjem klipova?</span>
-                    <span class="subtitle-line">Ja ću vam pomoći! Počnite odmah.</span>
-                </p>
-            </div>
-            
-            <!-- Video section -->
-            <div class="video-section">
-                <div class="video-overlay" id="videoOverlay2">
-                    <div class="play-button" onclick="playVideo2()">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <iframe id="videoPlayer2" src="https://streamable.com/e/skrua3?autoplay=1&muted=1&controls=0" allow="autoplay" frameborder="0"></iframe>
-            </div>
-            
             <div class="selection-container">
                 <h2 class="selection-title">Izaberite Tip Naloga</h2>
                 <p class="selection-subtitle">Da li želite da gledate i delite klipove ili da ih kreiramo?</p>
@@ -615,19 +595,6 @@
                 
                 <button class="back-button" onclick="showMainPage()">Nazad</button>
             </div>
-            
-            <!-- Stats Section -->
-            <div class="stats-section">
-                <div class="stat-item">
-                    <div class="student-avatars">
-                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
-                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
-                        <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
-                    </div>
-                    <div class="stat-value">1K+</div>
-                    <div class="stat-label">Klipera</div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -635,18 +602,6 @@
         function playVideo() {
             const overlay = document.getElementById('videoOverlay');
             const video = document.getElementById('videoPlayer');
-            
-            // Remove muted parameter and enable audio
-            video.src = video.src.replace('muted=1', 'muted=0');
-            video.src = video.src.replace('controls=0', 'controls=1');
-            
-            // Hide overlay
-            overlay.classList.add('hidden');
-        }
-        
-        function playVideo2() {
-            const overlay = document.getElementById('videoOverlay2');
-            const video = document.getElementById('videoPlayer2');
             
             // Remove muted parameter and enable audio
             video.src = video.src.replace('muted=1', 'muted=0');
