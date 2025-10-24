@@ -19,7 +19,7 @@
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            color: #2596be;
+            color: #117338;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -69,8 +69,8 @@
         .site-name {
             font-size: 14px;
             font-weight: 600;
-            color: #2596be;
-            letter-spacing: 1px;
+            color: #117338;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
@@ -78,7 +78,7 @@
         h1 {
             font-size: 48px;
             margin-bottom: 15px;
-            color: #2596be;
+            color: #117338;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -103,7 +103,7 @@
             position: relative;
             overflow: hidden;
             background: #000;
-            outline: 3px solid #2596be;
+            outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
@@ -129,24 +129,24 @@
         .play-button {
             width: 80px;
             height: 80px;
-            background: rgba(37, 150, 190, 0.9);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            outline: 3px solid #2596be;
+            outline: 3px solid #ffffff;
             outline-offset: 2px;
         }
         
         .play-button:hover {
             transform: scale(1.1);
-            background: rgba(37, 150, 190, 1);
+            background: rgba(255, 255, 255, 1);
         }
         
         .play-button i {
-            color: white;
+            color: #117338;
             font-size: 30px;
             margin-left: 5px;
         }
@@ -162,6 +162,7 @@
         .cta-section {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
         
         .cta-button {
@@ -169,7 +170,7 @@
             width: calc(60% - 6px);
             margin: 0 auto;
             padding: 12px 24px;
-            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
+            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
             color: white;
             border: none;
             font-size: 18px;
@@ -178,20 +179,43 @@
             text-align: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
+            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
             letter-spacing: 0.5px;
-            outline: 3px solid #2596be;
+            outline: 3px solid #117338;
             outline-offset: 3px;
             margin-bottom: 50px;
+            position: relative;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
+            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
-            color: #2596be;
-            outline: 3px solid #2596be;
+            color: #117338;
+            outline: 3px solid #117338;
             outline-offset: 3px;
+        }
+        
+        .arrow-left, .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .arrow-left {
+            left: 10%;
+            background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
+        }
+        
+        .arrow-right {
+            right: 10%;
+            background-image: url('https://cdn.discordapp.com/attachments/1412062435053146203/1431278951463915650/10002.png?ex=68fcd5e5&is=68fb8465&hm=e6479c73a4f129a523898ba97f8a316ea2fa77aea027e0bb49e8ca726e02153d&');
+            transform: translateY(-50%) scaleX(-1);
         }
         
         /* Stats Section */
@@ -209,13 +233,13 @@
         .stat-value {
             font-size: 36px;
             font-weight: 700;
-            color: #2596be;
+            color: #117338;
             margin-bottom: 10px;
         }
         
         .stat-label {
             font-size: 18px;
-            color: #2596be;
+            color: #117338;
             font-weight: 500;
         }
         
@@ -255,7 +279,7 @@
         }
         
         .dark-blue-background h1 {
-            color: #2596be;
+            color: #117338;
         }
         
         .dark-blue-background .subtitle {
@@ -263,7 +287,7 @@
         }
         
         .dark-blue-background .stat-value {
-            color: #2596be;
+            color: #117338;
         }
         
         .dark-blue-background .stat-label {
@@ -271,7 +295,7 @@
         }
         
         .dark-blue-background .video-section {
-            outline: 3px solid #2596be;
+            outline: 3px solid #117338;
             outline-offset: 3px;
             background: #000;
         }
@@ -313,26 +337,26 @@
         
         .selection-button {
             padding: 12px 24px;
-            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
+            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
             color: white;
             border: none;
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
+            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
             width: calc(80% - 6px);
             max-width: calc(200px - 6px);
-            outline: 3px solid #2596be;
+            outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
         .selection-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
+            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
-            color: #2596be;
-            outline: 3px solid #2596be;
+            color: #117338;
+            outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
@@ -361,25 +385,25 @@
             bottom: 30px;
             right: 30px;
             padding: 10px 18px;
-            background: linear-gradient(135deg, #2596be 0%, #1e87b0 100%);
+            background: linear-gradient(135deg, #117338 0%, #0e5c2c 100%);
             color: white;
             border: none;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
+            box-shadow: 0 6px 20px rgba(17, 115, 56, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
-            outline: 3px solid #2596be;
+            outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
         .floating-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 150, 190, 0.6);
+            box-shadow: 0 10px 25px rgba(17, 115, 56, 0.6);
             background: white;
-            color: #2596be;
-            outline: 3px solid #2596be;
+            color: #117338;
+            outline: 3px solid #117338;
             outline-offset: 3px;
         }
         
@@ -439,6 +463,19 @@
             .site-name {
                 font-size: 12px;
             }
+            
+            .arrow-left, .arrow-right {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .arrow-left {
+                left: 5%;
+            }
+            
+            .arrow-right {
+                right: 5%;
+            }
         }
     </style>
 </head>
@@ -457,7 +494,7 @@
     <div id="mainPage">
         <div class="container">
             <div class="header-section">
-                <div class="site-name">kliperi.com</div>
+                <div class="site-name">k l i p e r i . c o m</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
                 <p class="subtitle">
                     <span class="subtitle-line">Želite da zarađujete novac samo postavljanjem klipova?</span>
@@ -476,7 +513,9 @@
             </div>
             
             <div class="cta-section">
+                <div class="arrow-left"></div>
                 <button class="cta-button" onclick="showSelectionPage()">Započni</button>
+                <div class="arrow-right"></div>
             </div>
             
             <!-- Stats Section -->
@@ -496,13 +535,9 @@
     
     <!-- Selection Page -->
     <div id="selectionPage" class="selection-page dark-blue-background">
-        <div class="top-bar">
-            <img src="https://cdn.discordapp.com/attachments/1412062435053146203/1431001403933069402/logo_green.jpg?ex=68fbd369&is=68fa81e9&hm=e276cf2d414f55c40b465d617c7b3e3b6bfdbfecc5fe3b62794ef5c1d2853caf&" alt="Logo">
-        </div>
-        
         <div class="container">
             <div class="header-section">
-                <div class="site-name">kliperi.com</div>
+                <div class="site-name">k l i p e r i . c o m</div>
                 <h1>ZARAĐUJTE NOVAC DANAS</h1>
                 <p class="subtitle">
                     <span class="subtitle-line">Želite da zarađujete novac samo postavljanjem klipova?</span>
